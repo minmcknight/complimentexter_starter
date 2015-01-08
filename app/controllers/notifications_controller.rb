@@ -1,11 +1,16 @@
 class NotificationsController < ApplicationController
 
   def create
-    #add the code that will create a new notification and text it to the provided number 
+   notification= Notification.new(notification_params)
+   notification.text
+   redirect_to "/"
+  end
+
+  def new
   end
 
   private
   def notification_params
-    #what are the params needed to make a new notification? (refer to your model)
+    params.require(:to_number)
   end
 end

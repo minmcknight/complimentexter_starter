@@ -1,0 +1,5 @@
+<%= form_tag("/compliment") do %>
+<%= label_tag(:to_number, "phone number") %>
+<%= text_field_tag(:to_number) %>
+<%= submit_tag("Send compliment") %>
+<% end %>

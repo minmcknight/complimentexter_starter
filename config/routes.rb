@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post 'compliment' => "notifications#create"
+  root 'notifications#new'
+  get 'new_compliment' => "notifications#new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
